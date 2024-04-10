@@ -44,8 +44,17 @@ class BankBranch {
     }
     return bankBranchInstance;
   }
-
+  // Define methods to manage branch informantion
   getBranchInfo() {
     return this.branchInfo;
   }
 }
+
+// Usage
+const branchA = new BankBranch("Randburg");
+console.log(branchA.getBranchInfo()); //Outputs: main street branch
+
+const branchB = new BankBranch("Rustenburg");
+console.log(branchB.getBranchInfo()); //Outputs: main street branch, its a singleton
+
+console.log(branchA === branchB); // true, both variables point to the same intance
